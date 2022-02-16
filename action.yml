@@ -17,6 +17,8 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.urls }}
   
 branding:
   icon: 'terminal
