@@ -1,1 +1,23 @@
+# action name
+name: 'onedrive-to-github-sync'
 
+# action author
+author: 'Benjamin Michaelis <gitben@michaelis.net>'
+
+# action description
+description: 'Syncs specified files from OneDrive to your local GitHub repo.'
+
+# action input values
+inputs:
+  urls:
+    description: 'Comma-seperated list of the share url of each file with ?download=1 appended'
+    required: 'true:'
+    
+# action runner (golang:latest image)
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  
+branding:
+  icon: 'terminal
+  color: 'green'
