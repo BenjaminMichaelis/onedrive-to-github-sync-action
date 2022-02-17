@@ -12,14 +12,17 @@ inputs:
   urls:
     description: 'Comma-seperated list of the share url of each file with ?download=1 appended'
     required: 'true:'
-    
+outputs:
+  sum: # id of the output
+    description: 'The sum of the inputs'
+
 # action runner (golang:latest image)
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.urls }}
-  
+
 branding:
-  icon: 'terminal
-  color: 'green'
+  icon: 'terminal'  
+  color: 'blue'

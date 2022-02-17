@@ -1,5 +1,8 @@
-Write-Host $PSVersion
+Set-StrictMode -Version "Latest"
 
-$URLS = os.Getenv("INPUT_URLS")
+$URLS = $env:INPUT_URLS
 
-Write-Host $URLS
+Write-Output "Write output"
+Write-Output $URLS
+Write-Output $INPUT_URLS
+Write-Output $env:INPUT_URLS
